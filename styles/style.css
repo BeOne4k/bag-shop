@@ -3,6 +3,11 @@
   margin: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
 ul {
   list-style: none;
 }
@@ -12,18 +17,26 @@ a {
 }
 
 header {
-  height: 13vh;
   font-family: "Space Grotesk", serif;
   font-optical-sizing: auto;
   font-weight: 600;
 }
 header nav {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
-  height: 100%;
+  height: 13%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: 0.5s ease-in-out;
+}
+header nav:hover {
+  transition: 0.5s ease-in-out;
+  background-color: black;
 }
 header nav .desk-nav {
   margin-left: 40px;
@@ -75,7 +88,6 @@ header nav ul input::placeholder {
   transition: color 0.3s ease-in-out;
 }
 header nav ul input:hover, header nav ul input:focus {
-  background-color: black;
   border-bottom: 2px solid white;
 }
 header nav ul input:hover::-moz-placeholder, header nav ul input:focus::-moz-placeholder {
@@ -109,7 +121,47 @@ header nav ul input:hover + .ico,
 header nav ul input:focus + .ico {
   color: white;
 }
-header nav ul li:last-child {
+
+.shp-now {
+  font-family: "Space Grotesk", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 90vh;
+  width: 100vw;
+  background-image: url(https://static.wixstatic.com/media/84770f_93b300330b3742f2b1948ef292a91f27~mv2_d_1920_1279_s_2.png/v1/fill/w_1863,h_819,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/84770f_93b300330b3742f2b1948ef292a91f27~mv2_d_1920_1279_s_2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.shp-now .btn-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.shp-now .btn-div .btn-sec button {
+  font-family: "Space Grotesk", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  background-color: transparent;
+  padding: 15px 55px;
+  border: 2px solid white;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.shp-now .btn-div .btn-sec button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s ease-in-out;
+}
+.shp-now .btn-div div h1 {
+  color: white;
+  font-size: 70px;
 }/*# sourceMappingURL=style.css.map */
