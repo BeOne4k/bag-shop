@@ -1,1 +1,115 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 13vh;
+  font-family: "Space Grotesk", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+}
+header nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .desk-nav {
+  margin-left: 40px;
+  display: flex;
+  color: white;
+  font-size: 20px;
+}
+header nav ul {
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+header nav ul a {
+  color: rgb(170, 164, 164);
+  transition: 0.5s;
+}
+header nav ul a:hover {
+  color: white;
+}
+header nav ul input {
+  font-size: 16px;
+  font-family: "Space Grotesk", serif;
+  font-weight: 600;
+  padding-left: 5px;
+  background-color: transparent;
+  height: 40px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgb(170, 164, 164);
+  color: white;
+  outline: none;
+  transition: background-color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+header nav ul input::-moz-placeholder {
+  font-size: 16px;
+  font-family: "Space Grotesk", serif;
+  font-weight: 600;
+  color: rgb(170, 164, 164);
+  -moz-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+header nav ul input::placeholder {
+  font-size: 16px;
+  font-family: "Space Grotesk", serif;
+  font-weight: 600;
+  color: rgb(170, 164, 164);
+  transition: color 0.3s ease-in-out;
+}
+header nav ul input:hover, header nav ul input:focus {
+  background-color: black;
+  border-bottom: 2px solid white;
+}
+header nav ul input:hover::-moz-placeholder, header nav ul input:focus::-moz-placeholder {
+  color: white;
+}
+header nav ul input:hover::placeholder, header nav ul input:focus::placeholder {
+  color: white;
+}
+header nav ul li {
+  display: flex;
+  align-items: center;
+}
+header nav ul li .fa-circle-user {
+  color: rgb(170, 164, 164);
+  font-size: 20px;
+  margin-right: 5px;
+  line-height: 1;
+}
+header nav ul li .inpt {
+  max-width: 120px;
+  position: relative;
+}
+header nav ul li .inpt .ico {
+  top: 25%;
+  left: 80%;
+  position: absolute;
+  color: rgb(170, 164, 164);
+  transition: color 0.3s ease-in-out;
+}
+header nav ul input:hover + .ico,
+header nav ul input:focus + .ico {
+  color: white;
+}
+header nav ul li:last-child {
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */

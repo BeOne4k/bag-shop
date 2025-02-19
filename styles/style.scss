@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    height: 13vh;
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    nav{
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .desk-nav{
+            margin-left: 40px;
+            display: flex;
+            color: white;
+            font-size: 20px;
+        }
+        ul {
+            margin-right: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            a {
+                color: rgb(170, 164, 164);
+                transition: 0.5s;
+                &:hover {
+                    color: white;
+                }
+            }
+            input {
+                font-size: 16px;
+                font-family: "Space Grotesk", serif;
+                font-weight: 600;
+                padding-left: 5px;
+                background-color: transparent;
+                height: 40px;
+                width: 100%;
+                border: none;
+                border-bottom: 2px solid rgb(170, 164, 164); 
+                color: white; 
+                outline: none; 
+                transition: background-color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+                &::placeholder {
+                    font-size: 16px;
+                    font-family: "Space Grotesk", serif;
+                    font-weight: 600;
+                    color: rgb(170, 164, 164);
+                    transition: color 0.3s ease-in-out;
+                }
+                &:hover,
+                &:focus {
+                    background-color: black;
+                    border-bottom: 2px solid white;
+                    &::placeholder {
+                        color: white;
+                    }
+                }
+            }
+            li {
+                display: flex;
+                align-items: center;
+                .fa-circle-user {
+                    color: rgb(170, 164, 164);
+                    font-size: 20px;
+                    margin-right: 5px;
+                    line-height: 1;
+                }
+                .inpt {
+                    max-width: 120px;
+                    position: relative;
+                    .ico {
+                        top: 25%;
+                        left: 80%;
+                        position: absolute;
+                        color: rgb(170, 164, 164);
+                        transition: color 0.3s ease-in-out;
+                    }
+                }
+            }
+            input:hover + .ico,
+            input:focus + .ico {
+                color: white;
+            }
+            li:last-child {
+                display: flex;
+                align-items: center;
+            }
+        }    
+    }
+}
