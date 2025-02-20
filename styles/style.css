@@ -22,7 +22,7 @@ header {
   font-weight: 600;
 }
 header nav {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.45);
   width: 100%;
   height: 13%;
   display: flex;
@@ -138,18 +138,19 @@ header nav ul input:focus + .ico {
   background-repeat: no-repeat;
 }
 .shp-now .btn-div {
+  margin-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
 }
 .shp-now .btn-div .btn-sec button {
   font-family: "Space Grotesk", serif;
   font-optical-sizing: auto;
   font-weight: 600;
   background-color: transparent;
-  padding: 15px 55px;
+  padding: 10px 55px;
   border: 2px solid white;
   color: white;
   font-size: 30px;
@@ -164,4 +165,56 @@ header nav ul input:focus + .ico {
 .shp-now .btn-div div h1 {
   color: white;
   font-size: 70px;
+}
+.shp-now .btn-div div .fa-chevron-down {
+  margin-top: 40px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.new-arr {
+  display: flex;
+}
+.new-arr .arrivals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: black;
+  height: 70vh;
+  width: 50vw;
+}
+.new-arr .arrivals div h1 {
+  font-family: "Space Grotesk", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  color: white;
+  font-size: 55px;
+}
+.new-arr .arrivals div button {
+  font-family: "Space Grotesk", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  background-color: transparent;
+  padding: 10px 55px;
+  border: 2px solid white;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.new-arr .arrivals div button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s ease-in-out;
+}
+.new-arr .bag-photo {
+  height: 70vh;
+  width: 50vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(https://static.wixstatic.com/media/84770f_93b2185955e84e4fbeeecad36c77fedc~mv2_d_1920_1920_s_2.png/v1/fill/w_933,h_722,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/84770f_93b2185955e84e4fbeeecad36c77fedc~mv2_d_1920_1920_s_2.png);
 }/*# sourceMappingURL=style.css.map */
