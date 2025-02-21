@@ -231,7 +231,7 @@ header{
             color: white;
         }
         img {
-            transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -243,7 +243,7 @@ header{
             font-size: 24px;
             font-weight: bold;
             opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
             text-align: center;
             cursor: pointer;
         }
@@ -292,3 +292,261 @@ header{
         letter-spacing: 5px;
     }
 }
+
+.paraSec{
+    width: 100%;
+    height: 65vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-image: url(https://static.wixstatic.com/media/84770f_0e8ed0ee72314e2f9c9f53e51ebc660f~mv2_d_2500_1366_s_2.jpg/v1/fill/w_1190,h_638,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/84770f_0e8ed0ee72314e2f9c9f53e51ebc660f~mv2_d_2500_1366_s_2.jpg);
+    .textPara{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        .textBox{
+            margin-left: 30%;
+            font-family: "Space Grotesk", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            color: white;
+            width: 50%;
+            h1{
+                font-size: 50px;
+            }
+            span{
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+.contact {
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15%;
+    background: black;
+    color: white;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+    .contact-form {
+        flex: 1;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        .input-group {
+            display: flex;
+            gap: 30px;
+
+            div {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        label {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+        input, textarea {
+            font-family: "Space Grotesk", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            width: 100%;
+            padding: 10px;
+            background: black;
+            border: 2px solid white;
+            color: white;
+            font-size: 16px;
+            outline: none;
+            resize: none;
+            transition: 0.3s;
+            &:hover {
+                border-color: rgb(122, 122, 122);
+            }
+        }
+        button {
+            font-family: "Space Grotesk", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            margin-left: 54.5%;
+            width: 50%;
+            margin-top: 20px;
+            padding: 10px;
+            background: black;
+            border: 2px solid white;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+                border-color: rgb(122, 122, 122);
+                color: rgb(122, 122, 122);
+            }
+        }
+    }
+    .contact-info {
+        padding-top: 40px;
+        width: 20%;
+        h2 {
+            padding-bottom: 20px;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        p {
+            padding-bottom: 20px;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.mail-list{
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    width: 100vw;
+    height: 50vh;
+    background-color: #111;
+    .subscription-form {
+        color: white;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h2 {
+            font-size: 60px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        input[type="email"] {
+            font-family: "Space Grotesk", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            width: 40%;
+            padding: 10px;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            font-size: 16px;
+            margin-bottom: 15px;
+            transition: 0.3s ease-in-out, color 0.3s ease-in-out;
+            &:hover {
+                border-color: rgb(122, 122, 122);
+                color: rgb(122, 122, 122);
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+        .checkbox-container {
+            display: flex;
+            margin-right: 26.4%;
+            gap: 5px;
+            background-color: transparent;
+            input[type="checkbox"] {
+                appearance: none;
+                width: 16px;
+                height: 16px;
+                border: 2px solid white;
+                border-radius: 3px;
+                background-color: transparent;
+                cursor: pointer;
+                position: relative;
+                &::after {
+                    content: "✔"; 
+                    font-size: 12px;
+                    color: white;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    transition: opacity 0.1s ease-in-out;
+                }
+                &:checked::after {
+                    opacity: 1;
+                }
+            }
+            label {
+                font-size: 14px;
+            }
+        }
+        button {
+            width: 41.2%;
+            padding: 12px;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out, color 0.3s ease-in-out;
+            &:hover {
+                border-color: rgb(122, 122, 122);
+                color: rgb(122, 122, 122);
+            }
+        }
+    }
+}
+
+.footer {
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    height: 5vh;
+    background-color: #3a3a3a;
+    padding: 20px 0;
+    .footer-container {
+        height: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #888;
+        font-size: 14px;
+    }
+    .footer-text {
+        font-size: 17px;
+        margin: 0;
+    }
+    .footer-nav {
+        display: flex;
+        gap: 15px;
+        font-size: 17px;
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.3s ease;
+  
+        &:hover {
+            color: #fff;
+            }
+        }
+    }
+}
+  
+  
