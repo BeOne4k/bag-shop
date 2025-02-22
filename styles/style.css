@@ -50,8 +50,11 @@ header nav .nav-right {
   gap: 25px;
   margin-right: 50px;
 }
+header nav .nav-right .burger-menu {
+  display: none;
+}
 header nav .inpt {
-  max-width: 120px;
+  width: 30%;
   position: relative;
 }
 header nav .inpt input {
@@ -89,7 +92,7 @@ header nav .inpt input:hover::placeholder, header nav .inpt input:focus::placeho
 header nav .inpt .ico {
   position: absolute;
   top: 25%;
-  left: 80%;
+  left: 90%;
   color: rgb(170, 164, 164);
   transition: color 0.3s ease-in-out;
 }
@@ -546,9 +549,93 @@ header nav ul li .fa-circle-user {
 
 @media (max-width: 800px) {
   header nav {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8%;
+    height: 15%;
     background-color: black;
   }
-  header nav .nav-right ul {
+  header nav .desk-nav {
+    margin-left: 3%;
+  }
+  header nav .nav-right {
+    position: relative;
+  }
+  header nav .nav-right .inpt {
+    left: 15%;
+  }
+  header nav .nav-right .inpt input {
+    width: 400%;
+  }
+  header nav .nav-right .inpt .ico {
+    left: 380%;
+  }
+  header nav .nav-right .resp-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.4s ease-in-out;
+    z-index: 999;
+  }
+  header nav .nav-right .resp-nav .inpt {
+    width: 100%;
+  }
+  header nav .nav-right .resp-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+  header nav .nav-right .resp-nav ul li i {
     display: none;
+  }
+  header nav .nav-right .resp-nav.show {
+    right: 0;
+  }
+  header nav .nav-right .burger-menu {
+    z-index: 1000;
+    position: absolute;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30px;
+    height: 30px;
+  }
+  header nav .nav-right .burger-menu .dv1,
+  header nav .nav-right .burger-menu .dv2,
+  header nav .nav-right .burger-menu .dv3 {
+    height: 4px;
+    background-color: white;
+    transition: 0.3s;
+  }
+  header nav .nav-right .burger-menu .dv1 {
+    width: 15px;
+  }
+  header nav .nav-right .burger-menu .dv3 {
+    width: 15px;
+    margin-left: 50%;
+  }
+  header nav .nav-right .burger-menu.active .dv1 {
+    transform: rotate(45deg) translate(5px, 13px);
+    width: 30px;
+  }
+  header nav .nav-right .burger-menu.active .dv2 {
+    opacity: 0;
+  }
+  header nav .nav-right .burger-menu.active .dv3 {
+    transform: rotate(-45deg) translate(5px, -13px);
+    width: 30px;
+    margin-left: 0;
   }
 }/*# sourceMappingURL=style.css.map */
