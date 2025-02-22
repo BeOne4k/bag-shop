@@ -36,7 +36,6 @@ header nav {
   transition: 0.5s ease-in-out;
 }
 header nav:hover {
-  transition: 0.5s ease-in-out;
   background-color: black;
 }
 header nav .desk-nav {
@@ -45,21 +44,17 @@ header nav .desk-nav {
   color: white;
   font-size: 20px;
 }
-header nav ul {
-  margin-right: 50px;
+header nav .nav-right {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 25px;
+  margin-right: 50px;
 }
-header nav ul a {
-  color: rgb(170, 164, 164);
-  transition: 0.5s;
+header nav .inpt {
+  max-width: 120px;
+  position: relative;
 }
-header nav ul a:hover {
-  color: white;
-}
-header nav ul input {
+header nav .inpt input {
   font-size: 16px;
   font-family: "Space Grotesk", serif;
   font-weight: 600;
@@ -71,30 +66,43 @@ header nav ul input {
   border-bottom: 2px solid rgb(170, 164, 164);
   color: white;
   outline: none;
-  transition: background-color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+  transition: border-bottom 0.3s ease-in-out;
 }
-header nav ul input::-moz-placeholder {
-  font-size: 16px;
-  font-family: "Space Grotesk", serif;
-  font-weight: 600;
+header nav .inpt input::-moz-placeholder {
   color: rgb(170, 164, 164);
   -moz-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
-header nav ul input::placeholder {
-  font-size: 16px;
-  font-family: "Space Grotesk", serif;
-  font-weight: 600;
+header nav .inpt input::placeholder {
   color: rgb(170, 164, 164);
   transition: color 0.3s ease-in-out;
 }
-header nav ul input:hover, header nav ul input:focus {
+header nav .inpt input:hover, header nav .inpt input:focus {
   border-bottom: 2px solid white;
 }
-header nav ul input:hover::-moz-placeholder, header nav ul input:focus::-moz-placeholder {
+header nav .inpt input:hover::-moz-placeholder, header nav .inpt input:focus::-moz-placeholder {
   color: white;
 }
-header nav ul input:hover::placeholder, header nav ul input:focus::placeholder {
+header nav .inpt input:hover::placeholder, header nav .inpt input:focus::placeholder {
+  color: white;
+}
+header nav .inpt .ico {
+  position: absolute;
+  top: 25%;
+  left: 80%;
+  color: rgb(170, 164, 164);
+  transition: color 0.3s ease-in-out;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+header nav ul a {
+  color: rgb(170, 164, 164);
+  transition: 0.5s;
+}
+header nav ul a:hover {
   color: white;
 }
 header nav ul li {
@@ -105,22 +113,6 @@ header nav ul li .fa-circle-user {
   color: rgb(170, 164, 164);
   font-size: 20px;
   margin-right: 5px;
-  line-height: 1;
-}
-header nav ul li .inpt {
-  max-width: 120px;
-  position: relative;
-}
-header nav ul li .inpt .ico {
-  top: 25%;
-  left: 80%;
-  position: absolute;
-  color: rgb(170, 164, 164);
-  transition: color 0.3s ease-in-out;
-}
-header nav ul input:hover + .ico,
-header nav ul input:focus + .ico {
-  color: white;
 }
 
 .shp-now {
@@ -550,4 +542,13 @@ header nav ul input:focus + .ico {
 }
 .footer .footer-nav a:hover {
   color: #fff;
+}
+
+@media (max-width: 800px) {
+  header nav {
+    background-color: black;
+  }
+  header nav .nav-right ul {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
