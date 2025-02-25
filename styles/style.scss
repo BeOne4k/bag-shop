@@ -685,7 +685,37 @@ header {
             height: auto;
         }
     }
-
+    .paraSec{
+        .textPara{
+            width: 100%;
+            .textBox{
+                margin-left: 0%;
+            }
+        }
+    }
+    .contact{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        .contact-info{
+            width: 100%;
+        }
+    }
+    .mail-list{
+        .subscription-form{
+            button{
+                width: 43%;
+            }
+            .checkbox-container{
+                margin-left: 20%;
+            }
+        }
+    }
+    .footer{
+        .footer-container{
+            flex-direction: column;
+        }
+    }
 }
 
 

@@ -660,4 +660,27 @@ header nav ul li .fa-circle-user {
     width: 100%;
     height: auto;
   }
+  .paraSec .textPara {
+    width: 100%;
+  }
+  .paraSec .textPara .textBox {
+    margin-left: 0%;
+  }
+  .contact {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .contact .contact-info {
+    width: 100%;
+  }
+  .mail-list .subscription-form button {
+    width: 43%;
+  }
+  .mail-list .subscription-form .checkbox-container {
+    margin-left: 20%;
+  }
+  .footer .footer-container {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */
