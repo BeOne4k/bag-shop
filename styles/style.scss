@@ -137,10 +137,13 @@ header {
         justify-content: center;
         flex-direction: column;
         gap: 30px;
-        div{
+        .plan{
+            width: 100vw;
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: row;
+            gap: 20px;
         }
         .btn-sec{
             button{
@@ -594,6 +597,7 @@ header {
                     align-items: center;
                     transition: right 0.4s ease-in-out;
                     z-index: 999;
+                    font-size: 35px;
                     .inpt{
                         width: 100%;
                     }
@@ -612,6 +616,7 @@ header {
                     }
                 }
                 .resp-nav.show {
+                    width: 100vw;
                     right: 0;
                 }
                 .burger-menu {
@@ -657,8 +662,8 @@ header {
     }
     .shp-now{
         .btn-div{
-            div{
-                width: 105%;
+            .plan{
+                width: 100%;
             }
         }
     }
@@ -683,6 +688,10 @@ header {
         .short-ct-img {
             width: 100%;
             height: auto;
+            div{
+                width: 100%;
+                margin-bottom: -10px;
+            }
         }
     }
     .paraSec{
@@ -718,7 +727,77 @@ header {
     }
 }
 
+@media (max-width: 415px) {
+   header{
+       nav{
+           height: 20vh;
+           flex-direction: column;
+           justify-content: center;
+           align-items: flex-start;
+           .desk-nav{
+               margin-left: 30px;
+           }
+           .nav-right{
+               .burger-menu{
+                   margin-bottom: 20%;
+                   margin-right: 40px;
 
+               }
+                .resp-nav.show {
+                width: 100vw;
+                }
+           }
+       }
+   }
+   .shp-now{
+       .btn-div{
+           .plan{
+               flex-direction: column;
+           }
+       }
+   }
+   .paraSec{
+       .textPara{
+           .textBox{
+               width: 90%;
+               margin-left: 10px;
+           }
+       }
+   }
+   .mail-list{
+        .subscription-form{
+            .checkbox-container{
+                margin-left: 0%;
+            }
+            h2{
+                font-size: 35px;
+            }
+            button{
+                width: 95%;
+            }
+            .emailInpt{
+                width: 90% !important;
+            }
+        }
+    }
+    .footer{
+        height: 20vh !important;
+        .footer-container{
+            margin-top: 20px;
+            flex-direction: column-reverse;
+            gap: 20px;
+            .footer-text{
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+            .footer-nav{
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
 
 
 

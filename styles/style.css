@@ -141,10 +141,13 @@ header nav ul li .fa-circle-user {
   flex-direction: column;
   gap: 30px;
 }
-.shp-now .btn-div div {
+.shp-now .btn-div .plan {
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
+  gap: 20px;
 }
 .shp-now .btn-div .btn-sec button {
   font-family: "Space Grotesk", serif;
@@ -582,6 +585,7 @@ header nav ul li .fa-circle-user {
     align-items: center;
     transition: right 0.4s ease-in-out;
     z-index: 999;
+    font-size: 35px;
   }
   header nav .nav-right .resp-nav .inpt {
     width: 100%;
@@ -598,6 +602,7 @@ header nav ul li .fa-circle-user {
     display: none;
   }
   header nav .nav-right .resp-nav.show {
+    width: 100vw;
     right: 0;
   }
   header nav .nav-right .burger-menu {
@@ -636,8 +641,8 @@ header nav ul li .fa-circle-user {
     width: 30px;
     margin-left: 0;
   }
-  .shp-now .btn-div div {
-    width: 105%;
+  .shp-now .btn-div .plan {
+    width: 100%;
   }
   .new-arr {
     flex-direction: column;
@@ -659,6 +664,10 @@ header nav ul li .fa-circle-user {
   .short .short-ct-img {
     width: 100%;
     height: auto;
+  }
+  .short .short-ct-img div {
+    width: 100%;
+    margin-bottom: -10px;
   }
   .paraSec .textPara {
     width: 100%;
@@ -682,5 +691,59 @@ header nav ul li .fa-circle-user {
   }
   .footer .footer-container {
     flex-direction: column;
+  }
+}
+@media (max-width: 415px) {
+  header nav {
+    height: 20vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  header nav .desk-nav {
+    margin-left: 30px;
+  }
+  header nav .nav-right .burger-menu {
+    margin-bottom: 20%;
+    margin-right: 40px;
+  }
+  header nav .nav-right .resp-nav.show {
+    width: 100vw;
+  }
+  .shp-now .btn-div .plan {
+    flex-direction: column;
+  }
+  .paraSec .textPara .textBox {
+    width: 90%;
+    margin-left: 10px;
+  }
+  .mail-list .subscription-form .checkbox-container {
+    margin-left: 0%;
+  }
+  .mail-list .subscription-form h2 {
+    font-size: 35px;
+  }
+  .mail-list .subscription-form button {
+    width: 95%;
+  }
+  .mail-list .subscription-form .emailInpt {
+    width: 90% !important;
+  }
+  .footer {
+    height: 20vh !important;
+  }
+  .footer .footer-container {
+    margin-top: 20px;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .footer .footer-container .footer-text {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .footer .footer-container .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }/*# sourceMappingURL=style.css.map */
