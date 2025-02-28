@@ -30,8 +30,34 @@ document.addEventListener("DOMContentLoaded", () => {
             productsContainer.innerHTML += productHTML;
         });
     })
-    .catch(error => console.error("Ошибка при загрузке данных:", error));
+    .catch(error => console.error("error:", error));
 
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("https://67bee5c7b2320ee05011d70b.mockapi.io/products")
+    .then(response => response.json())
+    .then(data => {
+        const bagsContainer = document.querySelector(".bags");
+
+        data.forEach(product => {
+            const productHTML = `
+                <div class="second-product-card">
+                    <a href="#">
+                        <div class="image-wrapper">
+                            <img src="${product.image}" alt="${product.name}">
+                        </div>
+                        <h3>${product.name}</h3>
+                        <span class="price">$${product.price}</span>
+                    </a>
+                </div>
+            `;
+
+            bagsContainer.innerHTML += productHTML;
+        });
+    })
+    .catch(error => console.error("error:", error));
 });
 
 
