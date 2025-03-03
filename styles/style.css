@@ -79,6 +79,11 @@ header nav .inpt input::-moz-placeholder {
   -moz-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
+header nav .inpt input:-ms-input-placeholder {
+  color: rgb(170, 164, 164);
+  -ms-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
 header nav .inpt input::placeholder {
   color: rgb(170, 164, 164);
   transition: color 0.3s ease-in-out;
@@ -87,6 +92,9 @@ header nav .inpt input:hover, header nav .inpt input:focus {
   border-bottom: 2px solid white;
 }
 header nav .inpt input:hover::-moz-placeholder, header nav .inpt input:focus::-moz-placeholder {
+  color: white;
+}
+header nav .inpt input:hover:-ms-input-placeholder, header nav .inpt input:focus:-ms-input-placeholder {
   color: white;
 }
 header nav .inpt input:hover::placeholder, header nav .inpt input:focus::placeholder {
@@ -670,8 +678,8 @@ header nav ul li .fa-circle-user {
     height: 30px;
   }
   header nav .nav-right .burger-menu .dv1,
-  header nav .nav-right .burger-menu .dv2,
-  header nav .nav-right .burger-menu .dv3 {
+header nav .nav-right .burger-menu .dv2,
+header nav .nav-right .burger-menu .dv3 {
     height: 4px;
     background-color: white;
     transition: 0.3s;

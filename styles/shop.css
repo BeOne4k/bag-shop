@@ -8,6 +8,7 @@
   color: white;
   display: flex;
   flex-direction: row;
+  padding-bottom: 50px;
 }
 .mainShop .filterMenu {
   display: flex;
@@ -54,6 +55,12 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.mainShop .allProducts .sorted .productsCount .sorts {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .mainShop .allProducts .descr {
   width: 70%;
