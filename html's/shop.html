@@ -46,20 +46,6 @@
 
     <section class="mainShop">
         <div class="filterMenu">
-            <div>
-                <h2>Browse by</h2>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="packFilter">
-                <div><span>All products</span></div>
-                <div><span>Backpacks</span></div>
-                <div><span>Duffle bags</span></div>
-                <div><span>New Arrivals</span></div>
-                <div><span>Travel Packs</span></div>
-            </div>
-
             <div class="priceFilter">
                 <div>
                     <h2>Price Filter</h2>
@@ -72,16 +58,36 @@
             <div><h1>Products</h1></div>
             <div class="descr"><span>This is your category description. It’s a great place to tell customers what this category is about, connect with your audience and draw attention to your products.</span></div>
             <div class="sorted">
-                <div class="productsCount">
-                    <div><span>18 products</span></div>
-                    <div class="sort-by">Sort by:</div>
+                        <div class="productsCount">
+                        <div><span>15 products</span></div>
+                            <div class="sorts"><div class="sort-by">Sort by:</div><div class="fiterBy">
+                                <select name="sorts" class="byPrice">
+                                    <option value="recommended">Recommended</option>
+                                    <option value="priceLtH">Price (low to high)</option>
+                                    <option value="priceHtL">Price (high to low)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="bags">
-
-            </div>
+            <div class="bags"></div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+          <p class="footer-text">
+            © 2035 by NORTHPOLE. Powered and secured by <a style="color: #888;" href="">Wix</a>
+          </p>
+          <nav class="footer-nav">
+            <a href="">FAQ</a>
+            <a href="">Groups</a>
+            <a href="">Shipping & Returns</a>
+            <a href="">Terms & Conditions</a>
+          </nav>
+        </div>
+      </footer>
+
     <script src="/script/main.js"></script>
 </body>
 </html>

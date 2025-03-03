@@ -60,6 +60,42 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(error => console.error("error:", error));
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const sortSelect = document.querySelector(".byPrice");
+    const bagsContainer = document.querySelector(".bags");
+    let originalOrder = Array.from(bagsContainer.children);
+
+    sortSelect.addEventListener("change", () => {
+        if (sortSelect.value === "recommended") {
+            bagsContainer.innerHTML = originalOrder; 
+            originalOrder.forEach(product => bagsContainer.appendChild(product));
+        } else {
+            let products = Array.from(bagsContainer.children)
+            let sortedProducts = bubbleSort(products, sortSelect.value);
+            
+            bagsContainer.innerHTML = originalOrder;
+            sortedProducts.forEach(product => bagsContainer.appendChild(product));
+        }
+    });
+
+    function bubbleSort(arr, order) {
+        let len = arr.length;
+        for (let i = 0; i < len - 1; i++) {
+            for (let j = 0; j < len - 1 - i; j++) {
+                let priceA = parseFloat(arr[j].querySelector(".price").textContent.replace("$", ""));
+                let priceB = parseFloat(arr[j + 1].querySelector(".price").textContent.replace("$", ""));
+
+                if ((order === "priceLtH" && priceA > priceB) || (order === "priceHtL" && priceA < priceB)) {
+                    [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                }
+            }
+        }
+        return arr;
+    }
+});
+
+
+
 
 
 
