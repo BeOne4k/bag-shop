@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  width: 20%;
   height: 100%;
   gap: 20px;
   margin-left: 2%;
@@ -49,12 +49,47 @@
   height: 1px;
   width: 100%;
 }
+.mainShop .priceFilter .sortFrom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.mainShop .priceFilter .sortFrom #priceRange {
+  width: 90%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  height: 5px;
+  background: white;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.mainShop .priceFilter .sortFrom #priceRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.mainShop .priceFilter .sortFrom .price-values {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  font-size: 18px;
+  margin-top: 5px;
+}
 .mainShop .allProducts {
   margin-top: 11%;
   margin-left: 5%;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 150%;
 }
 .mainShop .allProducts .sorted .productsCount .sorts {
   width: 400px;
