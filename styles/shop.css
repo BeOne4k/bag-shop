@@ -97,6 +97,13 @@
   align-items: center;
   justify-content: center;
 }
+.mainShop .allProducts .sorted .productsCount .sorts .filterBy select {
+  font-family: "Space Grotesk", serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+}
 .mainShop .allProducts .descr {
   width: 70%;
 }
@@ -112,7 +119,7 @@
   justify-content: space-between;
 }
 .mainShop .allProducts .sorted .productsCount .sort-by {
-  margin-right: 15%;
+  margin-right: 2%;
 }
 .mainShop .allProducts .bags {
   display: flex;

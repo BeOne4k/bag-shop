@@ -17,13 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
         data.slice(0, 3).forEach((product) => {
           const productHTML = `
                   <div class="product-card">
-                      <a href="#">
                           <div class="image-wrapper">
                               <img src="${product.image}" alt="${product.name}">
                           </div>
                           <h3>${product.name}</h3>
                           <span class="price">$${product.price}</span>
-                      </a>
                   </div>
               `;
   
@@ -42,13 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
         data.forEach((product) => {
           const productHTML = `
                   <div class="second-product-card">
-                      <a href="#">
                           <div class="image-wrapper">
                               <img src="${product.image}" alt="${product.name}">
                           </div>
                           <h3>${product.name}</h3>
                           <span class="price">$${product.price}</span>
-                      </a>
                   </div>
               `;
   
@@ -150,13 +146,11 @@ document.addEventListener("DOMContentLoaded", () => {
                   filteredProducts.forEach((product) => {
                       const productHTML = `
                           <div class="second-product-card">
-                              <a href="#">
                                   <div class="image-wrapper">
                                       <img src="${product.image}" alt="${product.name}">
                                   </div>
                                   <h3>${product.name}</h3>
                                   <span class="price">$${product.price}</span>
-                              </a>
                           </div>
                       `;
   
@@ -177,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let products = [];
 
     if (!priceRange || !bagsContainer || !sortSelect) {
-        console.error("Ошибка: не найдены элементы");
+        console.error("error", error);
         return;
     }
 
@@ -203,13 +197,11 @@ document.addEventListener("DOMContentLoaded", () => {
         filteredProducts.forEach((product) => {
             const productHTML = `
                 <div class="second-product-card">
-                    <a href="#">
                         <div class="image-wrapper">
                             <img src="${product.image}" alt="${product.name}">
                         </div>
                         <h3>${product.name}</h3>
                         <span class="price">$${product.price}</span>
-                    </a>
                 </div>
             `;
             bagsContainer.innerHTML += productHTML;
