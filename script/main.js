@@ -30,30 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch((error) => console.error("error:", error));
   });
-  
-  document.addEventListener("DOMContentLoaded", () => {
-    fetch("https://67bee5c7b2320ee05011d70b.mockapi.io/products")
-      .then((response) => response.json())
-      .then((data) => {
-        const bagsContainer = document.querySelector(".bags");
-  
-        data.forEach((product) => {
-          const productHTML = `
-                  <div class="second-product-card">
-                          <div class="image-wrapper">
-                              <img src="${product.image}" alt="${product.name}">
-                          </div>
-                          <h3>${product.name}</h3>
-                          <span class="price">$${product.price}</span>
-                  </div>
-              `;
-  
-          bagsContainer.innerHTML += productHTML;
-        });
-      })
-      .catch((error) => console.error("error:", error));
-  });
-  
+
   document.addEventListener("DOMContentLoaded", () => {
     const sortSelect = document.querySelector(".byPrice");
     const bagsContainer = document.querySelector(".bags");
@@ -117,53 +94,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }, 500);
   });
-  
-  
-  document.addEventListener("DOMContentLoaded", () => {
-      const priceRange = document.getElementById("priceRange");
-      const minPrice = document.getElementById("minPrice");
-      const maxPrice = document.getElementById("maxPrice");
-      const bagsContainer = document.querySelector(".bags");
-  
-      if (!priceRange || !bagsContainer) {
-          console.error("error");
-          return;
-      }
-  
-      minPrice.textContent = `$${priceRange.min}`;
-      maxPrice.textContent = `$${priceRange.value}`;
-  
-      priceRange.addEventListener("input", () => {
-          maxPrice.textContent = `$${priceRange.value}`;
-  
-          fetch("https://67bee5c7b2320ee05011d70b.mockapi.io/products")
-              .then((response) => response.json())
-              .then((data) => {
-                  bagsContainer.innerHTML = "";
-  
-                  let filteredProducts = data.filter(product => product.price <= priceRange.value);
-  
-                  filteredProducts.forEach((product) => {
-                      const productHTML = `
-                          <div class="second-product-card">
-                                  <div class="image-wrapper">
-                                      <img src="${product.image}" alt="${product.name}">
-                                  </div>
-                                  <h3>${product.name}</h3>
-                                  <span class="price">$${product.price}</span>
-                          </div>
-                      `;
-  
-                      bagsContainer.innerHTML += productHTML;
-                  });
-              })
-              .catch(error => console.error("error:", error));
-      });
-  });
 
   document.addEventListener("DOMContentLoaded", () => {
     const priceRange = document.getElementById("priceRange");
-    const minPrice = document.getElementById("minPrice");
     const maxPrice = document.getElementById("maxPrice");
     const bagsContainer = document.querySelector(".bags");
     const sortSelect = document.querySelector(".byPrice");
@@ -196,13 +129,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         filteredProducts.forEach((product) => {
             const productHTML = `
-                <div class="second-product-card">
-                        <div class="image-wrapper">
-                            <img src="${product.image}" alt="${product.name}">
-                        </div>
-                        <h3>${product.name}</h3>
-                        <span class="price">$${product.price}</span>
+                <a href="product.html?id=${product.id}" class="second-product-card">
+                <div class="image-wrapper">
+                    <img src="${product.image}" alt="${product.name}">
                 </div>
+                <h3>${product.name}</h3>
+                <span class="price">$${product.price}</span>
+            </a>
             `;
             bagsContainer.innerHTML += productHTML;
         });
@@ -216,4 +149,17 @@ document.addEventListener("DOMContentLoaded", () => {
     sortSelect.addEventListener("change", () => {
         updateProducts();
     });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const targetElement = document.querySelector(this.getAttribute('href'));
+
+    window.scrollTo({
+      top: targetElement.offsetTop - 200,
+      behavior: 'smooth'
+    });
+  });
 });
