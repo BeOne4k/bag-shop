@@ -176,3 +176,46 @@
         
     }
 }
+
+//responsive
+
+@media (max-width: 800px) {
+    .mainShop{
+        padding-top: 7%;
+        .filterMenu{
+            display: none;
+        }
+        .allProducts{
+            width: 100%;
+            .bags{
+                width: 100%;
+                justify-content: center;
+                .image-wrapper{
+                    width: 360px;
+                }
+            }
+            .sorted{
+                .productsCount{
+                    .prCount{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 415px){
+    .mainShop{
+        padding-top: 33%;
+        .allProducts{
+            .sorted{
+                .productsCount{
+                    .prCount{
+                        width: 37%;
+                    }
+                }
+            }
+        }
+    }
+}
