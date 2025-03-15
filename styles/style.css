@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+.cartPage {
+  display: none;
+}
+
 header {
   font-family: "Space Grotesk", serif;
   font-optical-sizing: auto;
@@ -652,6 +656,9 @@ header nav ul li .fa-circle-user:hover {
   }
 }
 @media (max-width: 800px) {
+  .cartPage {
+    display: block;
+  }
   header nav {
     flex-direction: row;
     justify-content: flex-start;

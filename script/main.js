@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
         data.slice(0, 3).forEach((product) => {
           const productHTML = `
+          <a href="/html's/shop.html">
                   <div class="product-card">
                           <div class="image-wrapper">
                               <img src="${product.image}" alt="${product.name}">
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
                           <h3>${product.name}</h3>
                           <span class="price">$${product.price}</span>
                   </div>
+                  </a>
               `;
   
           productsContainer.innerHTML += productHTML;
@@ -94,6 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }, 500);
   });
+
+  
 
   document.addEventListener("DOMContentLoaded", () => {
     const priceRange = document.getElementById("priceRange");
@@ -210,6 +214,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             location.reload();
         });
     });
+});
+
+document.getElementById("shopBtn").addEventListener("click", function(){
+  window.location.href = "shop.html"
+});
+
+document.getElementById("secShopBtn").addEventListener("click", function(){
+  window.location.href = "shop.html"
+});
+
+document.querySelector('.fa-chevron-down').addEventListener('click', function() {
+  const targetSection = document.querySelector('.new-arr');
+  const offsetTop = targetSection.offsetTop - 230;
+  window.scrollTo({
+    top: offsetTop,
+    behavior: 'smooth'
+  });
 });
 
 });

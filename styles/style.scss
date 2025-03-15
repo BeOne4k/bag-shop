@@ -16,6 +16,9 @@ a{
     text-decoration: none;
 }
 
+.cartPage{
+    display: none;
+}
 header {
     font-family: "Space Grotesk", serif;
     font-optical-sizing: auto;
@@ -679,6 +682,9 @@ header {
 }
 
 @media (max-width: 800px) {
+    .cartPage{
+        display: block;
+    }
     header {
         nav {
             flex-direction: row;
