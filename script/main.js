@@ -230,6 +230,7 @@ document.querySelector('.fa-chevron-down').addEventListener('click', function() 
   });
 });
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.querySelector("#search-input");
   const productsContainer = document.querySelector("#products-container");
