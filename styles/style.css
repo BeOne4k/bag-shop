@@ -801,7 +801,10 @@ header nav ul li .fa-circle-user:hover {
     flex-direction: column;
   }
 }
-@media (max-width: 734px) {
+@media (max-width: 744px) {
+  .now-sale {
+    height: 170vh;
+  }
   header nav .desk-nav {
     margin-right: -50px;
   }

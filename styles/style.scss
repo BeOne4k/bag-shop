@@ -849,7 +849,10 @@ header {
     }
 }
 
-@media (max-width: 734px) {
+@media (max-width: 744px) {
+    .now-sale{
+        height: 170vh;
+        }
     header{
         nav{
             .desk-nav{
