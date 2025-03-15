@@ -162,4 +162,54 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       behavior: 'smooth'
     });
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const cartContainer = document.querySelector(".addedProducts");
+    const purchDiv = document.querySelector(".purch");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (cart.length === 0) {
+        cartContainer.innerHTML = "<h2>Your cart is empty</h2>";
+        purchDiv.innerHTML = "<p>Total: $0.00</p>";
+        return;
+    }
+
+    cartContainer.innerHTML = ""; 
+
+    cart.forEach(product => {
+        const productHTML = `
+            <div class="cart-item">
+                <img src="${product.image}" alt="${product.name}">
+                <div class="cart-info">
+                    <h3>${product.name}</h3>
+                    <p>Price: $${product.price.toFixed(2)}</p>
+                    <p>Quantity: ${product.quantity}</p>
+                    <p>Total: $${(product.price * product.quantity).toFixed(2)}</p>
+                    <button class="remove" data-id="${product.id}">Remove</button>
+                </div>
+            </div>
+        `;
+        cartContainer.innerHTML += productHTML;
+    });
+
+    const totalPrice = cart.reduce((sum, product) => sum + product.price * product.quantity, 0);
+    purchDiv.innerHTML = `<p>Total: $${totalPrice.toFixed(2)}</p>`;
+
+    const checkoutButton = `
+        <button class="checkout">Proceed to Checkout</button>
+    `;
+    purchDiv.innerHTML += checkoutButton;
+
+    document.querySelectorAll(".remove").forEach(button => {
+        button.addEventListener("click", (e) => {
+            let productId = e.target.dataset.id;
+
+            cart = cart.filter(item => item.id.toString() !== productId.toString());
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+            location.reload();
+        });
+    });
+});
+
 });

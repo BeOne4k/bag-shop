@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("productImage").src = product.image;
             document.getElementById("productImage").alt = product.name;
             document.getElementById("productName").textContent = product.name;
-            document.getElementById("productDescription").textContent = product.description || "I'm a product description. This is a great place to sell your product and grab buyers' attention. Describe your product clearly and concisely. Use unique keywords. Write your own description instead of using manufacturers' copy";
+            document.getElementById("productDescription").textContent = product.description || "I'm a product description. This is a great place to sell your product and grab buyers' attention. Describe your product clearly and concisely. Use unique keywords. Write your own description instead of using manufacturers' copy.";
             
             const priceElement = document.getElementById("productPrice");
             const quantityElement = document.getElementById("quantity");
@@ -37,6 +37,26 @@ document.addEventListener("DOMContentLoaded", () => {
                     quantityElement.textContent = quantity;
                     updatePrice();
                 }
+            });
+            document.querySelector(".blBTN").addEventListener("click", () => {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+                let existingProduct = cart.find(item => item.id === product.id);
+
+                if (existingProduct) {
+                    existingProduct.quantity += quantity;
+                } else {
+                    cart.push({
+                        id: product.id,
+                        name: product.name,
+                        price: product.price,
+                        image: product.image,
+                        quantity: quantity
+                    });
+                }
+
+                localStorage.setItem("cart", JSON.stringify(cart));
+                alert("Product added to cart!");
             });
         })
         .catch(error => console.error("Error loading product:", error));

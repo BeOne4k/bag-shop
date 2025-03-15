@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="/styles/shop.css">
-    <link rel="stylesheet" href="/styles/product.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <title>Document</title>
 </head>
 <body>
-
     <header>
         <nav>
             <div class="desk-nav">
@@ -23,10 +21,10 @@
                 <div class="resp-nav">
                     <ul>
                         <li><a href="/html's/shop.html">SHOP</a></li>
-                        <li><a href="/html's/index.html#about">ABOUT</a></li>
+                        <li><a href="#about">ABOUT</a></li>
                         <li><a href="">GROUPS</a></li>
-                        <li><a href="/html's/index.html#contact">CONTACT</a></li>
-                        <li><i class="fa-solid fa-circle-user"></i> <a class="log-in" href="">Log in</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                        <li><a class="log-in" href=""><i class="fa-solid fa-circle-user"></i>Log in</a></li>
                         <li><a href="/html's/cart.html"><i class="bascket fa-solid fa-basket-shopping"></i></a></li>
                     </ul>
                 </div>
@@ -45,29 +43,13 @@
         </nav>
     </header>
 
-    <section class="product-details">
-        <div class="container">
-            <div class="leftSide">
-                <img id="productImage" src="" alt="">
-            </div>
-            <div class="rightSide">
-                <h1 id="productName"></h1>
-                <span id="productPrice"></span>
-                <p id="productDescription"></p>
-                <div class="quantity">
-                    <button id="decrement">-</button>
-                    <span id="quantity">1</span>
-                    <button id="increment">+</button>
-                </div>
-                <div class="buttonsCont">
-                    <div class="addToCart">
-                        <div><button class="blBTN">Add to Cart</button></div>
-                        <div><button class="whBTN">Buy Now</button></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="cartSec"> 
+        <div class="addedProducts"></div>  
+        <div class="purch">
+            
+        </div> 
     </section>
+
 
     <footer class="footer">
         <div class="footer-container">
@@ -83,7 +65,6 @@
         </div>
       </footer>
 
-    <script src="/script/product.js"></script>
-</body>
+      <script src="/script/main.js"></script>
 </body>
 </html>
