@@ -57,6 +57,37 @@ header nav .nav-right {
   gap: 25px;
   margin-right: 50px;
 }
+header nav .nav-right .products-container {
+  height: 300px;
+  position: absolute;
+  top: 100%;
+  width: 180px;
+  background-color: rgba(48, 48, 48, 0.9);
+  border: 1px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  max-height: 400px;
+  overflow-y: auto;
+}
+header nav .nav-right .products-container .product-card {
+  font-size: 12px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  padding: 10px;
+}
+header nav .nav-right .products-container .product-card h3 {
+  width: 100px;
+}
+header nav .nav-right .products-container .product-card img {
+  height: 50px;
+}
 header nav .nav-right .burger-menu {
   display: none;
 }
@@ -672,6 +703,9 @@ header nav ul li .fa-circle-user:hover {
   }
   header nav .nav-right {
     position: relative;
+  }
+  header nav .nav-right .products-container {
+    width: 205px;
   }
   header nav .nav-right .inpt {
     left: 10%;

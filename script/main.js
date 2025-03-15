@@ -97,8 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 500);
   });
 
-  
-
   document.addEventListener("DOMContentLoaded", () => {
     const priceRange = document.getElementById("priceRange");
     const maxPrice = document.getElementById("maxPrice");
@@ -188,7 +186,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                     <h3>${product.name}</h3>
                     <p>Price: $${product.price.toFixed(2)}</p>
                     <p>Quantity: ${product.quantity}</p>
-                    <p>Total: $${(product.price * product.quantity).toFixed(2)}</p>
                     <button class="remove" data-id="${product.id}">Remove</button>
                 </div>
             </div>
@@ -233,4 +230,58 @@ document.querySelector('.fa-chevron-down').addEventListener('click', function() 
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.querySelector("#search-input");
+  const productsContainer = document.querySelector("#products-container");
+
+  searchInput.addEventListener("focus", () => {
+    fetch("https://67bee5c7b2320ee05011d70b.mockapi.io/products")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("data:", data);
+
+        const filteredProducts = data.filter((product) => {
+          console.log("ID:", product.id);
+          return [1, 4, 9, 12].includes(Number(product.id));
+        });
+
+        console.log("filtred products:", filteredProducts);
+
+        if (filteredProducts.length === 0) {
+          productsContainer.innerHTML = "<p>No product found</p>";
+        } else {
+          productsContainer.innerHTML = "";
+
+          filteredProducts.forEach((product) => {
+            const productHTML = `
+              <a href="/html's/shop.html">
+                <div class="product-card">
+                  <div class="image-wrapper">
+                    <img src="${product.image}" alt="${product.name}">
+                  </div>
+                  <h3>${product.name}</h3>
+                  <span class="price">$${product.price}</span>
+                </div>
+              </a>
+            `;
+            productsContainer.innerHTML += productHTML;
+          });
+        }
+
+        productsContainer.style.display = "block";
+      })
+      .catch((error) => {
+        console.error("error:", error);
+        productsContainer.innerHTML = "<p>error</p>";
+      });
+  });
+
+  searchInput.addEventListener("blur", () => {
+    setTimeout(() => {
+      productsContainer.style.display = "none";
+    }, 200);
+  });
 });
+});
+
+

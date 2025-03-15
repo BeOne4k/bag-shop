@@ -56,6 +56,40 @@ header {
             align-items: center;
             gap: 25px;
             margin-right: 50px;
+            .products-container {
+                height: 300px;
+                position: absolute;
+                top: 100%;
+                width: 180px;
+                background-color: rgba(48, 48, 48, 0.9);
+                border: 1px solid white;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                z-index: 100;
+                max-height: 400px;
+                overflow-y: auto;
+
+                .product-card {
+                    font-size: 12px;
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: black;
+                    color: white;
+                    border-bottom: 1px solid white;
+                    border-right: 1px solid white;
+                    border-left: 1px solid white;
+                    padding: 10px;
+
+                    h3 {
+                        width: 100px;
+                    }
+
+                    img {
+                        height: 50px;
+                    }
+                }
+            }
             .burger-menu{
                 display: none;
             }
@@ -698,6 +732,9 @@ header {
             }
             .nav-right {
                 position: relative;
+                .products-container{
+                    width: 205px;
+                }
                 .inpt{
                     left: 10%;
                     input{
