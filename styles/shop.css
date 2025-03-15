@@ -124,6 +124,8 @@
 .mainShop .allProducts .bags {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 .mainShop .allProducts .bags .second-product-card {
@@ -160,7 +162,7 @@
   margin-top: 5px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .mainShop {
     padding-top: 7%;
   }
@@ -187,5 +189,20 @@
   }
   .mainShop .allProducts .sorted .productsCount .prCount {
     width: 37%;
+  }
+}
+@media (max-width: 690px) {
+  .allProducts {
+    padding-top: 30px;
+  }
+}
+@media (max-width: 530px) {
+  .allProducts {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 495px) {
+  .allProducts {
+    padding-top: 80px;
   }
 }/*# sourceMappingURL=shop.css.map */
