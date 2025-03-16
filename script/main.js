@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
         data.slice(0, 3).forEach((product) => {
           const productHTML = `
-          <a href="/html's/shop.html">
+          <a href="product.html?id=${product.id}" class="second-product-card">
                   <div class="product-card">
                           <div class="image-wrapper">
                               <img src="${product.image}" alt="${product.name}">
@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           filteredProducts.forEach((product) => {
             const productHTML = `
-              <a href="/html's/shop.html">
+              <a href="product.html?id=${product.id}" class="second-product-card">
                 <div class="product-card">
                   <div class="image-wrapper">
                     <img src="${product.image}" alt="${product.name}">
