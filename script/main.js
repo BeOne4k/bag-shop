@@ -229,7 +229,7 @@ document.querySelector('.fa-chevron-down').addEventListener('click', function() 
     behavior: 'smooth'
   });
 });
-
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.querySelector("#search-input");
@@ -283,6 +283,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 200);
   });
 });
-});
-
-
