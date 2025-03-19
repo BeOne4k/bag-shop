@@ -1,4 +1,5 @@
 .groups{
+    padding-top: 5%;
     font-family: "Space Grotesk", serif;
     height: 100vh;
     background-color: black;
@@ -37,7 +38,7 @@
             flex-direction: column;
             align-items: center;
             width: 280px;
-            height: 50vh;
+            height: 60vh;
             border: 1px solid rgba(255, 255, 255, 0.283);
             h1{
                 letter-spacing: 2px;
@@ -107,7 +108,7 @@
             align-items: center;
             flex-direction: column;
             height: 40vh;
-            width: 70vh;
+            width: 80vh;
             border: 1px solid rgba(255, 255, 255, 0.283);
             letter-spacing: 2px;
             span{

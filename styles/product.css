@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 3%;
 }
 .product-details .container {
   display: flex;
@@ -30,7 +31,7 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 17%;
+  width: 32%;
   font-size: 25px;
 }
 .product-details .container .rightSide #productPrice {
