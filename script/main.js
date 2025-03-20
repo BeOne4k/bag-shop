@@ -196,10 +196,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const totalPrice = cart.reduce((sum, product) => sum + product.price * product.quantity, 0);
     purchDiv.innerHTML = `<p>Total: $${totalPrice.toFixed(2)}</p>`;
 
-    const checkoutButton = `
-        <button class="checkout">Proceed to Checkout</button>
-    `;
-    purchDiv.innerHTML += checkoutButton;
+    const checkoutButton = document.createElement("button");
+    checkoutButton.classList.add("checkout");
+    checkoutButton.textContent = "Proceed to Checkout";
+    purchDiv.appendChild(checkoutButton);
 
     document.querySelectorAll(".remove").forEach(button => {
         button.addEventListener("click", (e) => {
@@ -211,7 +211,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             location.reload();
         });
     });
+
+    checkoutButton.addEventListener("click", async () => {
+        if (cart.length === 0) return;
+
+        try {
+            await Promise.all(cart.map(product =>
+                fetch("https://67bee5c7b2320ee05011d70b.mockapi.io/cart", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(product)
+                })
+            ));
+
+            localStorage.removeItem("cart");
+            cartContainer.innerHTML = "<h2>Your cart is empty</h2>";
+            purchDiv.innerHTML = "<p>Total: $0.00</p>";
+
+            alert("Thank you for your purchase! Your order has been added to our queue!");
+        } catch (error) {
+            console.error("Error adding items to cart:", error);
+        }
+    });
 });
+
 
 document.getElementById("shopBtn").addEventListener("click", function(){
   window.location.href = "shop.html"
@@ -283,3 +306,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 200);
   });
 });
+
+
